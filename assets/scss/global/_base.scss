@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.btn {
+  border-radius: 200px;
+}
+
+.dark {
+  background-color: $primary;
+
+  a {
+    color: $white;
+  }
+}
+
+@mixin blur-decoration {
+  content: "";
+  position: absolute;
+  width: 60vw;
+  z-index: -1;
+  border-radius: 60vw;
+  background: rgba(#85c6ff, 0.4);
+  filter: blur(150px);
+}

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Zadanie rekrutacyjne - Digispot</title>
+    <meta name="description" content="Robots noindex" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="dist/app.css" />
+    <script src="dist/app.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <!-- Hero section START -->
+      <section class="hero-section container text-center">
+        <h1 class="mb-4">Przejrzyste ceny bez ukrytych opłat</h1>
+        <p class="lead">
+          <span class="d-block">Płać tylko za aktywnych kursantów, bez zobowiązań długoterminowych.</span>
+          Wybierz moduły, których potrzebujesz i oblicz rzeczywisty koszt dla swojej szkoły.
+        </p>
+      </section>
+      <!-- Hero section END -->
+
+      <!-- Pricing section START -->
+      <section class="pricing container">
+        <div class="row gx-4 gy-3">
+          <div class="col-xxl-7">
+            <div class="pricing-box">
+              <!-- Student count -->
+              <div class="mb-3">
+                <div class="mb-4">
+                  <label for="student-count-input" class="pricing-title">
+                    Wybierz lub wpisz liczbę słuchaczy Twojej szkoły:
+                  </label>
+
+                  <input
+                    id="student-count-input"
+                    name="student-count-input"
+                    class="student-count-input form-control"
+                    type="number"
+                    value="200"
+                  />
+                </div>
+
+                <span class="student-count-range-indicator-wrapper">
+                  <span class="student-count-range-indicator">200</span>
+                </span>
+
+                <input
+                  name="student-count-range"
+                  class="student-count-range form-range"
+                  type="range"
+                  min="1"
+                  max="1000"
+                  value="200"
+                  step="1"
+                />
+              </div>
+
+              <hr class="my-4" />
+
+              <!-- Modules -->
+              <div class="modules-section">
+                <p class="pricing-title mb-4">Wybierz moduły, z których chcesz korzystać:</p>
+
+                <div class="row gx-5 gy-4">
+                  <div class="col-md-6 d-flex flex-column gap-2">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="module-e-diary">E-dziennik</label>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="module-e-diary"
+                        data-cost="1"
+                        checked
+                        disabled
+                      />
+                    </div>
+
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="module-secretariat">Sekretariat</label>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="module-secretariat"
+                        data-cost="1"
+                        checked
+                        disabled
+                      />
+                    </div>
+
+                    <!-- Core modules info -->
+                    <div class="pricing-infobox row gx-2 mt-3">
+                      <div class="col-auto">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M8.97278 5.48193H8.94551C8.61824 5.48193 8.31824 5.75466 8.31824 6.10921C8.31824 6.46375 8.59096 6.73648 8.94551 6.73648H8.97278C9.30006 6.73648 9.60006 6.46375 9.60006 6.10921C9.60006 5.75466 9.32733 5.48193 8.97278 5.48193Z"
+                            fill="#343D4C"
+                          />
+                          <path
+                            d="M8.97273 7.63647C8.64546 7.63647 8.34546 7.9092 8.34546 8.26375V12.4637C8.34546 12.791 8.61819 13.091 8.97273 13.091C9.30001 13.091 9.60001 12.8183 9.60001 12.4637V8.23647C9.60001 7.9092 9.32728 7.63647 8.97273 7.63647Z"
+                            fill="#343D4C"
+                          />
+                          <path
+                            d="M8.97274 0.763672C4.4182 0.763672 0.709106 4.44549 0.709106 9.00004C0.709106 13.5546 4.4182 17.2637 8.97274 17.2637C13.5273 17.2637 17.2091 13.5546 17.2091 9.00004C17.2091 4.44549 13.5273 0.763672 8.97274 0.763672ZM8.97274 16.0364C5.10002 16.0364 1.93638 12.8728 1.93638 9.00004C1.93638 5.12731 5.10002 1.96367 8.97274 1.96367C12.8455 1.96367 15.9818 5.12731 15.9818 9.00004C15.9818 12.8728 12.8455 16.0364 8.97274 16.0364Z"
+                            fill="#343D4C"
+                          />
+                        </svg>
+                      </div>
+                      <div class="col">
+                        <p>
+                          Sekretariat i E-dziennik to serce systemu, które otrzymujesz na start. Rozbuduj swój system o
+                          dodatkowe moduły i zwiększ możliwości swojej szkoły.
+                        </p>
+
+                        <a href="#">Dowiedz się więcej o modułach</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 d-flex flex-column gap-2">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="module-online-payments">Płatności online</label>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="module-online-payments"
+                        data-cost="0.1"
+                      />
+                    </div>
+
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="module-finances">Finanse</label>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="module-finances"
+                        data-cost="0.2"
+                      />
+                    </div>
+
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="module-e-learning">E-learning</label>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="module-e-learning"
+                        data-cost="0.3"
+                      />
+                    </div>
+
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="module-online-teaching">Nauczanie online</label>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="module-online-teaching"
+                        data-cost="0.4"
+                      />
+                    </div>
+
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="module-registration">Rejestracja</label>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="module-registration"
+                        data-cost="0.5"
+                      />
+                    </div>
+
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="module-crm">CRM</label>
+                      <input class="form-check-input" type="checkbox" role="switch" id="module-crm" data-cost="0.6" />
+                    </div>
+
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="module-media-library">Medioteka</label>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="module-media-library"
+                        data-cost="0.7"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-5">
+            <div class="pricing-box mb-3">
+              <h2 class="pricing-title">Twoje koszty korzystania:</h2>
+              <hr />
+              <div class="pricing-summary-item">
+                <p>Liczba słuchaczy:</p>
+                <p id="student-count-display">200</p>
+              </div>
+              <div class="pricing-summary-item">
+                <p>Miesięczna cena za słuchacza:</p>
+                <p id="price-per-student">1,20 zł</p>
+              </div>
+              <hr />
+              <div class="pricing-summary-item pricing-summary-subtotal-gross">
+                <p>Miesięczny koszt brutto:</p>
+                <p id="monthly-cost-gross">295,20 zł</p>
+              </div>
+              <div class="pricing-summary-item pricing-summary-subtotal-net">
+                <p>Miesięczny koszt netto:</p>
+                <p id="monthly-cost-net">240,00 zł</p>
+              </div>
+            </div>
+            <button class="btn btn-primary pricing-summary-btn">
+              Wypróbuj za darmo przez 14 dni
+              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.46875 15.9062C1.28125 15.9062 1.125 15.8438 0.96875 15.7188C0.6875 15.4375 0.6875 15 0.96875 14.7188L7.53125 8L0.96875 1.3125C0.6875 1.03125 0.6875 0.59375 0.96875 0.3125C1.25 0.03125 1.6875 0.03125 1.96875 0.3125L9.03125 7.5C9.3125 7.78125 9.3125 8.21875 9.03125 8.5L1.96875 15.6875C1.84375 15.8125 1.65625 15.9062 1.46875 15.9062Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Pricing section END -->
+
+      <!-- Features section START -->
+      <section class="features container mt-5">
+        <div class="row">
+          <!-- Navigation -->
+          <div class="col-xl-3">
+            <div class="sticky-xl-top">
+              <div class="features-nav">
+                <a href="#secretariat" class="features-nav-item active">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="currentColor">
+                    <path
+                      d="m17.813 17.25-.563-5.656a2.004 2.004 0 0 0-2-1.813H2.75c-1.031 0-1.875.781-2 1.813L.188 17.25a1.95 1.95 0 0 0 .5 1.531c.375.407.906.657 1.468.657h13.625c.563 0 1.094-.25 1.469-.657.438-.406.594-.968.563-1.531Zm-1.563.594a.617.617 0 0 1-.438.187H2.188a.617.617 0 0 1-.438-.187c-.125-.125-.156-.282-.156-.469l.562-5.656a.582.582 0 0 1 .594-.531h12.5c.313 0 .563.218.594.53l.562 5.657c0 .188-.031.344-.156.469Z"
+                    />
+                    <path
+                      d="M9 12.281a2.36 2.36 0 0 0-2.344 2.344A2.34 2.34 0 0 0 9 16.969a2.34 2.34 0 0 0 2.344-2.344A2.34 2.34 0 0 0 9 12.281Zm0 3.281a.94.94 0 0 1-.938-.937.94.94 0 0 1 .938-.938.94.94 0 0 1 .938.938.92.92 0 0 1-.938.938ZM.906 6.438C.97 7.813 2.156 8.53 2.97 8.53h2.219c1-.062 2-.719 2-2.094v-.593h4.125v.593c0 1.375 1 2.032 2 2.094h2.218c.844 0 2-.719 2.063-2.094V5.063c-.094-.906-.407-1.656-.969-2.25l-.031-.03c-.813-.75-1.75-1.157-2.469-1.407C12 .562 9.344.562 9.219.562c-1.875.032-3.063.188-4.875.813-.75.281-1.688.688-2.5 1.406l-.032.031c-.562.594-.875 1.344-.968 2.25v.094c.031.063.062 1.157.062 1.282Zm1.938-2.625c.625-.563 1.375-.876 2-1.126C6.469 2.095 7.5 2 9.25 1.938c.156 0 2.531.032 4.406.75.656.25 1.406.563 2 1.126.313.343.5.812.563 1.343v1.219c-.032.656-.657.75-.657.75h-2.156c-.312-.031-.656-.156-.656-.688v-1.28c0-.313-.188-.595-.5-.657-.219-.125-5.75-.125-5.969-.031-.281.093-.5.375-.5.656v1.313c0 .53-.343.656-.656.687H2.969s-.625-.094-.656-.719V5.188c.03-.594.218-1.032.53-1.375Z"
+                    />
+                  </svg>
+                  Sekretariat
+                </a>
+
+                <a href="#e-diary" class="features-nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="currentColor">
+                    <path
+                      d="M12.375 16.156h-4.75a.727.727 0 0 0-.719.719c0 .406.313.719.719.719h4.781a.727.727 0 0 0 .719-.719c0-.406-.344-.719-.75-.719ZM7.531 11.219h4.938c.719 0 1.344-.594 1.344-1.344V8.031c0-.719-.594-1.344-1.344-1.344H7.53c-.718 0-1.343.594-1.343 1.344v1.844c.03.719.625 1.344 1.343 1.344Zm.094-3.094h4.781v1.688H7.625V8.124Z"
+                    />
+                    <path
+                      d="M5.313 2.469h11.062a.727.727 0 0 0 .719-.719.707.707 0 0 0-.719-.719H5.312c-1.25 0-2.25.969-2.343 2.188V18c0 1.063.906 1.906 2.031 1.906h10.281a1.6 1.6 0 0 0 1.594-1.593v-12.5a1.6 1.6 0 0 0-1.594-1.594H5.22c-.532 0-.844-.313-.844-.813-.031-.531.406-.937.938-.937Zm-.125 3.156s.03 0 0 0c.03 0 .03 0 0 0H15.25c.094 0 .188.094.188.188v12.562a.202.202 0 0 1-.188.188H4.969c-.344 0-.625-.22-.625-.5V5.5c.25.094.531.125.843.125Z"
+                    />
+                  </svg>
+                  E-dziennik
+                </a>
+
+                <a href="#finances" class="features-nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor">
+                    <path
+                      d="m19.281 5.969-2.437-1.532a2.081 2.081 0 0 0-2-1.5h-.375L10.375.408a.659.659 0 0 0-.75 0L5.5 2.968h-.375c-.938 0-1.75.625-2 1.5L.687 6a.67.67 0 0 0-.343.594v9.031c0 1.156.937 2.094 2.094 2.094H17.5a2.094 2.094 0 0 0 2.094-2.094V6.594c.031-.25-.094-.469-.313-.625Zm-1.093 1.843-1.25.47V6.186l1.25.782v.843ZM10 1.845 11.844 3H8.156L10 1.844ZM5.156 4.375h9.688c.344 0 .625.25.687.594V8.78l-5.656 2.094-5.406-1.969V4.97a.703.703 0 0 1 .687-.594ZM3.063 6.188v2.218l-1.25-.469V6.97l1.25-.782ZM17.5 16.28h-15a.694.694 0 0 1-.688-.687V9.438l7.844 2.843c.063.031.156.031.25.031s.156 0 .25-.03l8.031-2.97v6.282a.674.674 0 0 1-.687.687Z"
+                    />
+                    <path
+                      d="M10 9.625c1.219 0 2.219-1 2.219-2.219 0-1.218-1-2.218-2.219-2.218-1.219 0-2.219 1-2.219 2.218 0 1.219 1 2.219 2.219 2.219Zm0-3.063c.438 0 .813.375.813.813a.827.827 0 0 1-.813.813.827.827 0 0 1-.813-.813c0-.438.376-.813.813-.813Z"
+                    />
+                  </svg>
+                  Finanse
+                </a>
+
+                <a href="#e-learning" class="features-nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15">
+                    <path
+                      d="M18.75 10.281h-.844V2.47A2.407 2.407 0 0 0 15.5.063h-11a2.407 2.407 0 0 0-2.406 2.406v7.812H1.25A.727.727 0 0 0 .531 11v1.344a2.62 2.62 0 0 0 2.625 2.625h13.625a2.62 2.62 0 0 0 2.625-2.625V11c.063-.406-.281-.719-.656-.719ZM3.5 2.437c0-.562.438-1 1-1h10.969c.562 0 1 .438 1 1v7.813H3.5V2.437Zm14.563 9.876a1.22 1.22 0 0 1-1.22 1.218H3.189a1.22 1.22 0 0 1-1.22-1.219v-.624h16.095v.624Z"
+                    />
+                    <path
+                      d="M10.594 2.469H9.406a.727.727 0 0 0-.719.719c0 .406.313.718.72.718h1.187a.727.727 0 0 0 .719-.719.727.727 0 0 0-.72-.718Z"
+                    />
+                  </svg>
+                  E-learning
+                </a>
+
+                <a href="#online-teaching" class="features-nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                    <path
+                      d="M15.723 7.688a.658.658 0 0 0-.677 0l-1.938 1.125c0-1.063-.862-1.938-1.908-1.938H5.846c-1.046 0-1.938.875-1.938 1.969v2.344c0 1.062.861 1.968 1.938 1.968h5.323c1.046 0 1.939-.875 1.939-1.969l1.938 1.126a.613.613 0 0 0 .339.093.613.613 0 0 0 .338-.094.672.672 0 0 0 .339-.593V8.313c.03-.25-.124-.5-.339-.626Zm-4 3.5a.556.556 0 0 1-.554.562H5.846a.556.556 0 0 1-.554-.563V8.845c0-.313.246-.563.554-.563h5.323c.308 0 .554.25.554.563v2.344Zm2.985-.72L13.877 10l.83-.469v.938Z"
+                    />
+                    <path
+                      d="M10 .563C5.046.563.985 4.655.985 9.687c0 2.407.923 4.72 2.584 6.407l-.677 2.468a.765.765 0 0 0 .246.75.729.729 0 0 0 .431.157.693.693 0 0 0 .339-.094l2.461-1.313a8.534 8.534 0 0 0 3.631.782c4.954 0 9.015-4.094 9.015-9.157 0-5.03-4.061-9.124-9.015-9.124Zm0 16.875a7.774 7.774 0 0 1-3.354-.782c-.092-.062-.215-.062-.308-.062a.693.693 0 0 0-.338.093l-1.354.72.339-1.282a.77.77 0 0 0-.185-.719 8.009 8.009 0 0 1-2.43-5.719c0-4.28 3.415-7.75 7.63-7.75s7.63 3.47 7.63 7.75c0 4.282-3.415 7.75-7.63 7.75Z"
+                    />
+                  </svg>
+                  Nauczanie online
+                </a>
+
+                <a href="#registration" class="features-nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" fill="currentColor">
+                    <path
+                      d="M17.313 7.656h-7.5a.694.694 0 0 0-.688.688c0 .375.313.687.688.687h7.5c.406 0 .718.313.718.719v6.406a.707.707 0 0 1-.718.719H4.188a.707.707 0 0 1-.72-.719v-3.75a.694.694 0 0 0-.687-.687.694.694 0 0 0-.687.687v3.781c0 1.188.969 2.125 2.125 2.125h13.125a2.127 2.127 0 0 0 2.125-2.125V9.782c-.032-1.156-.969-2.125-2.157-2.125Z"
+                    />
+                    <path
+                      d="m4.719 12.094 2.5 1.844a.687.687 0 0 0 .406.125c.094 0 .187-.032.312-.063.22-.094.375-.344.407-.594l.218-3.093c0-.125 0-.25-.062-.344L4.75 1.906C4.5 1.406 4.094 1 3.562.813 3 .625 2.437.625 1.906.875l-.125.063A2.113 2.113 0 0 0 .75 3.75l3.75 8.063a.68.68 0 0 0 .219.28Zm2.312-.063-1.344-.968-2.843-6.094L4.28 4.28l2.844 6.125-.094 1.625ZM2.375 2.22l.125-.063a.707.707 0 0 1 .562-.03c.188.062.313.187.407.374l.218.5-1.437.688-.219-.5a.697.697 0 0 1 .344-.97ZM15.813 12.313a.694.694 0 0 0 .687-.688.694.694 0 0 0-.688-.688h-3a.694.694 0 0 0-.687.688c0 .375.313.688.688.688h3ZM9.75 14.438c0 .374.313.687.688.687h5.374a.694.694 0 0 0 .688-.688.694.694 0 0 0-.688-.687h-5.374a.694.694 0 0 0-.688.688Z"
+                    />
+                  </svg>
+                  Rejestracja
+                </a>
+
+                <a href="#online-payments" class="features-nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor">
+                    <path
+                      d="M17.5.375h-15A1.947 1.947 0 0 0 .562 2.313v11.343c0 1.063.875 1.938 1.938 1.938h15a1.947 1.947 0 0 0 1.938-1.938V2.344c0-1.094-.875-1.969-1.938-1.969Zm-15 1.406h15a.56.56 0 0 1 .563.563v1.469H1.938v-1.47a.56.56 0 0 1 .562-.562Zm15 12.438h-15a.56.56 0 0 1-.563-.563V5.22h16.094v8.437c.032.313-.218.563-.531.563Z"
+                    />
+                    <path
+                      d="M9.563 8.719h1.687a.694.694 0 0 0 .688-.688.694.694 0 0 0-.688-.687h-.313v-.032a.694.694 0 0 0-.687-.687.694.694 0 0 0-.688.688v.062c-.843.031-1.5.688-1.5 1.531v.031c0 .844.688 1.532 1.532 1.532h.844c.062 0 .124.062.124.125v.094a.134.134 0 0 1-.124.124H8.75a.694.694 0 0 0-.688.688c0 .375.313.688.688.688h.813v.03c0 .376.312.688.687.688a.694.694 0 0 0 .688-.687v-.156c.593-.22 1-.782 1-1.438v-.094c0-.844-.688-1.531-1.532-1.531h-.844a.134.134 0 0 1-.124-.125v-.094s.062-.062.124-.062Z"
+                    />
+                  </svg>
+                  Płatności online
+                </a>
+
+                <a href="#crm" class="features-nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor">
+                    <path
+                      d="m19.281 5.969-2.437-1.532a2.081 2.081 0 0 0-2-1.5h-.375L10.375.408a.659.659 0 0 0-.75 0L5.5 2.968h-.375c-.938 0-1.75.625-2 1.5L.687 6a.67.67 0 0 0-.343.594v9.031c0 1.156.937 2.094 2.094 2.094H17.5a2.094 2.094 0 0 0 2.094-2.094V6.594c.031-.25-.094-.469-.313-.625Zm-1.093 1.843-1.25.47V6.186l1.25.782v.843ZM10 1.845 11.844 3H8.156L10 1.844ZM5.156 4.375h9.688c.344 0 .625.25.687.594V8.78l-5.656 2.094-5.406-1.969V4.97a.703.703 0 0 1 .687-.594ZM3.063 6.188v2.218l-1.25-.469V6.97l1.25-.782ZM17.5 16.28h-15a.694.694 0 0 1-.688-.687V9.438l7.844 2.843c.063.031.156.031.25.031s.156 0 .25-.03l8.031-2.97v6.282a.674.674 0 0 1-.687.687Z"
+                    />
+                    <path
+                      d="M10 9.625c1.219 0 2.219-1 2.219-2.219 0-1.218-1-2.218-2.219-2.218-1.219 0-2.219 1-2.219 2.218 0 1.219 1 2.219 2.219 2.219Zm0-3.063c.438 0 .813.375.813.813a.827.827 0 0 1-.813.813.827.827 0 0 1-.813-.813c0-.438.376-.813.813-.813Z"
+                    />
+                  </svg>
+                  CRM
+                </a>
+
+                <a href="#media-library" class="features-nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentTab">
+                    <path
+                      d="M17.719 2.719h-6.063l-.531-1.031A1.725 1.725 0 0 0 9.594.78H4.906c-.937 0-1.718.781-1.718 1.719V4H2.28C1.344 4 .562 4.781.562 5.719v11.718c0 .938.782 1.72 1.72 1.72h12.812c.937 0 1.719-.782 1.719-1.72v-1.5h.906c.937 0 1.718-.78 1.718-1.718v-9.75a1.701 1.701 0 0 0-1.718-1.75Zm-2.313 14.75a.313.313 0 0 1-.312.312H2.28a.313.313 0 0 1-.312-.312V5.75c0-.188.156-.313.312-.313H6.97c.125 0 .218.063.281.157L8 7a.75.75 0 0 0 .625.375h6.5c.188 0 .313.156.313.313v9.78h-.032Zm2.656-3.219a.313.313 0 0 1-.312.313h-.906V7.686c0-.937-.782-1.718-1.719-1.718H9l-.531-1.032a1.725 1.725 0 0 0-1.531-.906H4.594v-1.5c0-.187.156-.312.312-.312h4.688c.125 0 .219.062.281.156l.75 1.375a.75.75 0 0 0 .625.375h6.5c.188 0 .313.156.313.313v9.812Z"
+                    />
+                  </svg>
+                  Medioteka
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features cards -->
+          <div class="col-xl-9">
+            <!-- Secretariat -->
+            <div class="feature-card active" id="secretariat">
+              <div class="row align-items-center">
+                <div class="col-md-3">
+                  <img src="assets/images/feature.png" class="img-fluid" alt="Sekretariat" />
+                </div>
+                <div class="feature-card-content col-md-9">
+                  <h2>Sekretariat</h2>
+                  <p>
+                    Najważniejsza część systemu. Pozwala dodawać kursantów, lektorów, tworzyć grupy, ustalać plan zajęć,
+                    wspomaga tworzenie umów i kontrolę realizacji zajęć.
+                  </p>
+                  <a href="#">Dowiedz się więcej</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- E-diary -->
+            <div class="feature-card" id="e-diary">
+              <div class="row align-items-center">
+                <div class="col-md-3"><img src="assets/images/feature.png" class="img-fluid" alt="Sekretariat" /></div>
+                <div class="feature-card-content col-md-9">
+                  <h2>E-dziennik</h2>
+                  <p>
+                    Obok Sekretariatu podstawowy moduł Platformy. Służy do prowadzenia elektronicznej dokumentacji
+                    przebiegu nauczania i umożliwia klientom bieżący dostęp do kalendarza zajęć, ocen, obecności,
+                    płatności.
+                  </p>
+                  <a href="#">Dowiedz się więcej </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Finances -->
+            <div class="feature-card" id="finances">
+              <div class="row align-items-center">
+                <div class="col-md-3"><img src="assets/images/feature.png" class="img-fluid" alt="Finanse" /></div>
+                <div class="feature-card-content col-md-9">
+                  <h2>Finanse</h2>
+                  <p>
+                    Moduł Finansowy umożliwia wystawianie faktur, rachunków, a także rozliczanie rat kursantów i czasu
+                    pracy lektorów. Można w nim prowadzić kasę firmową i rejestrować wpłaty w dowolnej formie płatności.
+                  </p>
+                  <a href="#">Dowiedz się więcej </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- E-learning -->
+            <div class="feature-card" id="e-learning">
+              <div class="row align-items-center">
+                <div class="col-md-3">
+                  <img src="assets/images/feature.png" class="img-fluid" alt="E-learning" />
+                </div>
+                <div class="feature-card-content col-md-9">
+                  <h2>E-learning</h2>
+                  <p>
+                    Moduł E-learning umożliwia tworzenie i zarządzanie kursami online. Umożliwia tworzenie lekcji,
+                    testów, ćwiczeń i innych materiałów edukacyjnych.
+                  </p>
+                  <a href="#">Dowiedz się więcej </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Nauczanie online -->
+            <div class="feature-card" id="online-teaching">
+              <div class="row align-items-center">
+                <div class="col-md-3">
+                  <img src="assets/images/feature.png" class="img-fluid" alt="Nauczanie online" />
+                </div>
+                <div class="feature-card-content col-md-9">
+                  <h2>Nauczanie online</h2>
+                  <p>
+                    Realizacja kursów na odległość przy użyciu kamery, mikrofonu i tablicy. Możliwość dotarcia do
+                    zupełnie nowych klientów oraz zapewnienia sobie skokowego wzrostu przychodów.
+                  </p>
+                  <a href="#">Dowiedz się więcej </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Rejestracja -->
+            <div class="feature-card" id="registration">
+              <div class="row align-items-center">
+                <div class="col-md-3"><img src="assets/images/feature.png" class="img-fluid" alt="Rejestracja" /></div>
+                <div class="feature-card-content col-md-9">
+                  <h2>Rejestracja</h2>
+                  <p>
+                    Internetowa forma zapisów nowych kursantów. Umożliwia dowolną konfigurację pytań oraz bezpośrednią
+                    integrację Państwa strony internetowej z Platformą LangLion. Uzupełnieniem dla niego jest moduł
+                    e-learningowy udoskonalający rejestrację o testy poziomujące.
+                  </p>
+                  <a href="#">Dowiedz się więcej </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Płatności online -->
+            <div class="feature-card" id="online-payments">
+              <div class="row align-items-center">
+                <div class="col-md-3">
+                  <img src="assets/images/feature.png" class="img-fluid" alt="Płatności online" />
+                </div>
+                <div class="feature-card-content col-md-9">
+                  <h2>Płatności online</h2>
+                  <p>
+                    PayU umożliwia słuchaczom elektroniczne regulowanie opłat za kursy, dzięki czemu zwiększa się
+                    komfort dokonywania płatności przez kursanta, a szkoła cieszy się szybkimi wpłatami. Sekretariat
+                    oszczędza czas, dzięki automatycznemu tworzeniu transakcji na Platformie LangLion.
+                  </p>
+                  <a href="#">Dowiedz się więcej </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CRM -->
+            <div class="feature-card" id="crm">
+              <div class="row align-items-center">
+                <div class="col-md-3"><img src="assets/images/feature.png" class="img-fluid" alt="CRM" /></div>
+                <div class="feature-card-content col-md-9">
+                  <h2>CRM</h2>
+                  <p>
+                    Customer Relationship Management - Moduł do zarządzania kontaktami z aktualnymi, archiwalnymi i
+                    potencjalnymi kursantami. Umożliwia tworzenie notatek, planowanie i opisywanie telefonów, spotkań z
+                    klientami.
+                  </p>
+                  <a href="#"> Dowiedz się więcej </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Medioteka -->
+            <div class="feature-card" id="media-library">
+              <div class="row align-items-center">
+                <div class="col-md-3"><img src="assets/images/feature.png" class="img-fluid" alt="Medioteka" /></div>
+                <div class="feature-card-content col-md-9">
+                  <h2>Medioteka</h2>
+                  <p>
+                    Część systemu pomagająca kontrolować stany magazynowe szkół językowych (wypożyczenia, zwroty,
+                    rezerwacje). Może zawierać książki, czasopisma, materiały elektroniczne, a nawet sprzęt
+                    elektroniczny itd. Integracja z dziennikiem elektronicznym umożliwia lektorom i kursantom
+                    rezerwowanie pozycji.
+                  </p>
+                  <a href="#">Dowiedz się więcej </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Features section END -->
+    </main>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+
+// -- Include any default variable overrides here START
+
+// Override colors
+$primary: #01579b;
+$white: #fff;
+
+$headings-color: #030712;
+$body-color: #343d4c;
+
+// Custom colors
+$light-blue: #e1f1ff;
+$stroke: #dfe4ea;
+
+// Form range
+$form-range-thumb-width: 1.25rem;
+$form-range-thumb-bg: $white;
+$form-range-thumb-border: 0.125rem solid $primary;
+$form-range-track-bg: $stroke;
+$form-range-track-height: 0.375rem;
+
+// Form switch
+$form-switch-color: $white;
+$form-switch-transition: background-position 0.2s ease-in-out;
+
+// -- Include any default variable overrides here END
+
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+
+// -- Include any default map overrides here START
+$custom-colors: (
+  "light-blue": $light-blue,
+  "stroke": $stroke,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$box-shadow: 0 0.25rem 0.75rem rgba($black, 0.06);
+
+// -- Include any default map overrides here END

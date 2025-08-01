@@ -1,0 +1,116 @@
+// Features Section Styles
+.features {
+  position: relative;
+  // overflow-y: hidden;
+
+  &::before,
+  &::after {
+    @include blur-decoration;
+    bottom: 35%;
+    right: 50%;
+    height: 40rem;
+  }
+
+  &::after {
+    bottom: -3rem;
+    left: 50%;
+  }
+
+  .sticky-xl-top {
+    top: 1rem;
+  }
+
+  &-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+  }
+
+  &-nav {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    border: 0.0625rem solid #e9ecef;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+
+    &-item {
+      border-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      transition: background-color 0.3s ease;
+      border-radius: 0.375rem;
+      padding: 0.5rem 0.75rem;
+      font-weight: 600;
+
+      &.active {
+        background-color: $light-blue;
+        color: $primary;
+      }
+
+      &:hover {
+        background-color: rgba($light-blue, 0.5);
+        color: $primary;
+      }
+    }
+  }
+}
+
+.feature-card {
+  scroll-margin-top: 1rem;
+  background: $white;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(13, 10, 44, 0.06);
+  padding: 1.5rem 1.25rem;
+  border: 0.0625rem solid $stroke;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  margin-bottom: 1.25rem;
+
+  &.active {
+    opacity: 1;
+  }
+
+  &-content {
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      max-width: 40.625rem;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 0.875rem;
+      }
+    }
+
+    a {
+      color: $primary;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.25rem;
+        height: 1.25rem;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzAxNTc5QiI+PHBhdGggZD0ibTE4IDkuNS02LjQ2OS02LjU2M2EuNjk4LjY5OCAwIDAgMC0xIDAgLjY5OC42OTggMCAwIDAgMCAxbDUuMjUgNS4zNDRIMi41YS42OTQuNjk0IDAgMCAwLS42ODguNjg4YzAgLjM3NS4zMTMuNzE5LjY4OC43MTloMTMuMzQ0bC01LjMxMyA1LjQwNmEuNjk4LjY5OCAwIDAgMCAwIDEgLjcxLjcxIDAgMCAwIC41LjE4Ny42MjIuNjIyIDAgMCAwIC41LS4yMThMMTggMTAuNWEuNjk4LjY5OCAwIDAgMCAwLTFaIi8+PC9zdmc+");
+        margin-left: 0.4rem;
+        transition: margin-left 0.1s ease;
+      }
+
+      &:hover::after {
+        margin-left: 0.75rem;
+      }
+    }
+  }
+}

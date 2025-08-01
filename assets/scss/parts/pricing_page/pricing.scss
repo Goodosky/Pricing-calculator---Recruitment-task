@@ -1,0 +1,200 @@
+.pricing {
+  position: relative;
+
+  &::before,
+  &::after {
+    @include blur-decoration;
+    bottom: -8rem;
+    right: 50%;
+    top: 8rem;
+  }
+
+  &::after {
+    bottom: 10rem;
+    left: 50%;
+    top: -6rem;
+  }
+
+  &-box {
+    background-color: $white;
+    border-radius: 1.25rem;
+    padding: 1rem;
+    border: 0.0625rem solid $stroke;
+    box-shadow: $box-shadow;
+
+    @include media-breakpoint-up(sm) {
+      padding: 2rem;
+    }
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: $headings-color;
+  }
+
+  &-summary {
+    &-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.1rem 0.5rem;
+      margin-bottom: 1rem;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    &-subtotal-gross {
+      color: $headings-color;
+      font-weight: 700;
+      font-size: 1.125rem;
+      margin-bottom: 0.25rem;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-subtotal-net {
+      color: #8497ae;
+      font-size: 0.8125rem;
+      margin-bottom: 0;
+    }
+
+    &-btn {
+      padding: 0.875rem 1.5rem;
+      display: flex;
+      gap: 0.875rem;
+      font-weight: 700;
+      align-items: center;
+      margin: auto;
+    }
+  }
+
+  &-infobox {
+    background-color: #f6f7f9;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+
+    @include media-breakpoint-up(sm) {
+      padding: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+    }
+
+    a {
+      color: $body-color;
+      text-decoration: underline;
+      font-weight: 600;
+      text-decoration-color: $primary;
+      text-underline-offset: 0.125rem;
+    }
+  }
+}
+
+.student-count {
+  &-input {
+    display: inline-block;
+    appearance: none;
+    border: none;
+    background-color: $light-blue;
+    text-align: center;
+    color: $primary;
+    padding: 0.625rem 0;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+
+    @include media-breakpoint-up(lg) {
+      width: 6.25rem;
+
+      width: 6.25rem;
+      margin-left: 1rem;
+    }
+
+    // Disable arrows (up and down)
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &-range {
+    // Progress bar (using linear gradient trick)
+    $form-range-track-linear-gradient: linear-gradient(
+      to right,
+      $primary var(--student-count-percentage),
+      $stroke var(--student-count-percentage)
+    );
+
+    &::-webkit-slider-runnable-track {
+      background: $form-range-track-linear-gradient;
+    }
+
+    &::-moz-range-track {
+      background: $form-range-track-linear-gradient;
+    }
+
+    // Indicator over the slider
+    &-indicator {
+      position: absolute;
+      bottom: 0;
+      left: var(--student-count-percentage);
+      transform: translateX(-50%);
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      background-color: $primary;
+      color: $white;
+      border-radius: 12.5rem;
+
+      &-wrapper {
+        width: calc(100% - $form-range-thumb-width);
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        height: 0.875rem + 2 * 0.25rem; // font-size + padding-top + padding-bottom
+        margin-bottom: 0.4rem;
+      }
+    }
+  }
+}
+
+.modules-section {
+  .form-switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-left: 0;
+  }
+
+  .form-check {
+    &-input {
+      height: 1.5rem;
+      width: 3.125rem;
+      background-color: $stroke;
+
+      &:checked {
+        background-color: $primary !important;
+      }
+
+      &:disabled {
+        opacity: 1 !important;
+        cursor: not-allowed !important;
+
+        &:checked {
+          --bs-form-switch-bg: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjciIGZpbGw9IiNmZmYiLz48cGF0aCBmaWxsPSIjMDE1NzlCIiBkPSJNNC42ODggMTIuMzc1aDYuNjI1Yy4yNCAwIC40MzctLjE5My40MzctLjQzMlY3LjgwNWEuNDMzLjQzMyAwIDAgMC0uNDM4LS40M2gtLjQyMXYtLjYwNGMwLS44MS0uMzE3LTEuNzEtLjgzMi0yLjI1M2EyLjg0IDIuODQgMCAwIDAtMi4wNTctLjg5M2gtLjAwNGMtLjgwNyAwLTEuNTQzLjM1LTIuMDU3Ljg5LS41MTUuNTQ0LS44MzIgMS40NDQtLjgzMiAyLjI1NXYuNjA1aC0uNDIxYS40MzQuNDM0IDAgMCAwLS40MzguNDN2NC4xMzhjMCAuMjM5LjE5NS40MzIuNDM4LjQzMlptMS40NTctNS42MDRjMC0uNTMzLjE5My0xLjE5My41NDgtMS41Njh2LS4wMDZhMS44MTIgMS44MTIgMCAwIDEgMS4zMDUtLjU3NmguMDA0Yy40ODYgMCAuOTYuMjEzIDEuMzA1LjU3NnYuMDA0bC0uMDAyLjAwMmMuMzU3LjM3NS41NDkgMS4wMzUuNTQ5IDEuNTY4di42MDRoLTMuNzF2LS42MDRaIi8+PC9zdmc+");
+        }
+      }
+    }
+  }
+}
